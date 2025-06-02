@@ -4,29 +4,25 @@
   --fold-height: 154.9mm; /* Unfolded height */
 }
 
-/* Foldable Device Media Queries */
-
-/* Folded State - Portrait (67.1mm width) */
-@media screen and (max-width: 67.1mm) {
+/* Mobile First Approach */
+@media screen and (max-width: 480px) {
   .container {
     padding: 0.5rem;
     max-width: 100%;
   }
 
-  /* Adjust text sizes for narrow view */
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
-  /* Stack elements vertically in folded state */
   .hero-content {
     flex-direction: column;
     align-items: center;
@@ -34,28 +30,27 @@
 
   .contact-info {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.75rem;
   }
 
-  /* Adjust profile photo size */
   .profile-photo img {
-    max-width: 120px;
+    max-width: 150px;
     height: auto;
   }
 }
 
-/* Unfolded State - Landscape (130.1mm width) */
-@media screen and (min-width: 130.1mm) {
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .container {
     padding: 1rem;
-    max-width: var(--fold-width);
+    max-width: 720px;
+    margin: 0 auto;
   }
 
-  /* Enable two-column layouts */
   .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .contact-info {
@@ -65,9 +60,52 @@
   }
 }
 
+/* Desktop */
+@media screen and (min-width: 769px) {
+  .container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Special handling for foldable devices */
+@media screen and (max-width: 67.1mm) {
+  /* Additional styles for folded state */
+  .container {
+    padding: 0.5rem;
+  }
+
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .profile-photo img {
+    max-width: 120px;
+  }
+}
+
+@media screen and (min-width: 67.2mm) and (max-width: 130.1mm) {
+  /* Styles for transitioning state */
+  .container {
+    padding: 0.75rem;
+  }
+}
+
 /* Detect fold capability using CSS environment features */
 @supports (spanning: single-fold-vertical) {
-  /* Styles for when device is folded vertically */
   @media (spanning: single-fold-vertical) {
     .container {
       display: flex;
@@ -77,20 +115,12 @@
   }
 }
 
-/* Handle different screen ratios */
-@media screen and (max-aspect-ratio: 1/1) {
-  /* Portrait mode adjustments */
-  .hero-section {
-    min-height: 100vh;
-  }
-}
-
 /* Safe area insets for notches and dynamic islands */
 .container {
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: max(env(safe-area-inset-left), 1rem);
+  padding-right: max(env(safe-area-inset-right), 1rem);
+  padding-top: max(env(safe-area-inset-top), 1rem);
+  padding-bottom: max(env(safe-area-inset-bottom), 1rem);
 }
 
 /* Smooth transitions for fold/unfold actions */
@@ -113,5 +143,13 @@
   * {
     transition: none !important;
     animation: none !important;
+  }
+}
+
+/* Handle different screen ratios */
+@media screen and (max-aspect-ratio: 1/1) {
+  /* Portrait mode adjustments */
+  .hero-section {
+    min-height: 100vh;
   }
 } 
