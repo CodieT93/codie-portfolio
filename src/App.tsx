@@ -6,6 +6,7 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import LogoLoop from './components/LogoLoop';
 import './styles/styles.css';
+import './styles/responsive.css';
 
 const App: React.FC = () => {
   return (

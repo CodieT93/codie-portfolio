@@ -19,10 +19,10 @@ const Hero: React.FC = () => {
               <i className="fas fa-phone"></i>
               <span>0404 556 593</span>
             </a>
-            <a href="#" className="contact-link">
+            <div className="contact-link">
               <i className="fas fa-map-marker-alt"></i>
               <span>Perth, WA</span>
-            </a>
+            </div>
             <a href="https://github.com/CodieT93" target="_blank" rel="noopener noreferrer" className="contact-link">
               <i className="fab fa-github"></i>
               <span>github.com/CodieT93</span>

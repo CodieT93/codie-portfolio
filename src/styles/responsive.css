@@ -1,0 +1,117 @@
+/* Base styles for all screen sizes */
+:root {
+  --fold-width: 130.1mm;  /* Unfolded width */
+  --fold-height: 154.9mm; /* Unfolded height */
+}
+
+/* Foldable Device Media Queries */
+
+/* Folded State - Portrait (67.1mm width) */
+@media screen and (max-width: 67.1mm) {
+  .container {
+    padding: 0.5rem;
+    max-width: 100%;
+  }
+
+  /* Adjust text sizes for narrow view */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  /* Stack elements vertically in folded state */
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Adjust profile photo size */
+  .profile-photo img {
+    max-width: 120px;
+    height: auto;
+  }
+}
+
+/* Unfolded State - Landscape (130.1mm width) */
+@media screen and (min-width: 130.1mm) {
+  .container {
+    padding: 1rem;
+    max-width: var(--fold-width);
+  }
+
+  /* Enable two-column layouts */
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Detect fold capability using CSS environment features */
+@supports (spanning: single-fold-vertical) {
+  /* Styles for when device is folded vertically */
+  @media (spanning: single-fold-vertical) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      min-height: env(viewport-segment-height 0 0);
+    }
+  }
+}
+
+/* Handle different screen ratios */
+@media screen and (max-aspect-ratio: 1/1) {
+  /* Portrait mode adjustments */
+  .hero-section {
+    min-height: 100vh;
+  }
+}
+
+/* Safe area insets for notches and dynamic islands */
+.container {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Smooth transitions for fold/unfold actions */
+.hero-content,
+.contact-info,
+.container {
+  transition: all 0.3s ease-in-out;
+}
+
+/* High contrast mode for better visibility in bright conditions */
+@media (prefers-contrast: high) {
+  :root {
+    --text-color: #000000;
+    --background-color: #ffffff;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+} 
