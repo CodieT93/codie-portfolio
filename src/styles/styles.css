@@ -162,12 +162,13 @@ button {
 .hero {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
   color: white;
-  padding: 2rem;
-  padding-top: 80px; /* Account for fixed navbar */
+  padding: 120px 0 0; /* Increase padding from navbar */
+  position: relative;
 }
 
 .hero-content {
@@ -260,6 +261,106 @@ button {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  margin-bottom: 1rem; /* Reduce space before logo scroll */
+}
+
+.hero-logo-loop {
+  width: 100vw; /* Make it full viewport width */
+  margin: 2rem 0 0; /* Remove horizontal margins */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.logo-loop-container {
+  width: 100vw;
+  overflow: hidden;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  min-height: 120px;
+}
+
+.logo-loop-container::before,
+.logo-loop-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  z-index: 2;
+}
+
+.logo-loop-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(26, 26, 26, 0.95), transparent);
+}
+
+.logo-loop-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(26, 26, 26, 0.95), transparent);
+}
+
+.logo-track {
+  display: flex;
+  animation: scroll 60s linear infinite;
+  gap: 3rem;
+  padding: 1rem 0;
+  align-items: center;
+  justify-content: center;
+  width: 200%;
+  height: 100%;
+}
+
+.logo-item {
+  flex: 0 0 auto;
+  width: 90px;
+  height: 90px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  margin: auto 0;
+}
+
+.logo-item img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0.8);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.logo-item:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo-item img:hover {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* About Section */
@@ -1117,12 +1218,17 @@ button {
 
 /* Logo Loop Styles */
 .logo-loop-container {
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(42, 42, 42, 0.95) 100%);
-  padding: 2rem 0;
+  background: transparent;
+  padding: 0;
   margin: 0;
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  min-height: 120px;
 }
 
 .logo-loop-container::before,
@@ -1149,8 +1255,11 @@ button {
   display: flex;
   animation: scroll 60s linear infinite;
   gap: 3rem;
-  padding: 1rem;
+  padding: 1rem 0;
   align-items: center;
+  justify-content: center;
+  width: 200%;
+  height: 100%;
 }
 
 .logo-item {
@@ -1164,16 +1273,17 @@ button {
   background: rgba(255, 255, 255, 0.03);
   border-radius: 12px;
   transition: all 0.3s ease;
+  margin: auto 0;
 }
 
 .logo-item img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: contain;
   filter: grayscale(100%) brightness(0.8);
   opacity: 0.7;
   transition: all 0.3s ease;
-  padding: 0.5rem;
+  padding: 0;
 }
 
 .logo-item:hover {

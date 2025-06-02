@@ -1,4 +1,5 @@
 import React from 'react';
+import LogoLoop from './LogoLoop';
 
 const Hero: React.FC = () => {
   return (
@@ -39,6 +40,7 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </div>
+      <LogoLoop />
     </section>
   );
 };
