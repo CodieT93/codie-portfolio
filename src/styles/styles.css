@@ -1,4 +1,13 @@
 /* Reset and Base Styles */
+:root {
+  color-scheme: dark;
+  --background-color: #1a1a1a;
+  --text-color: #ffffff;
+  --text-color-muted: #a0a0a0;
+  --primary-gradient: linear-gradient(45deg, #4a90e2, #63e2b7);
+  --background-gradient: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +21,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
-  color: #2a2a2a;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 code {
@@ -165,8 +175,8 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-  color: white;
+  background: var(--background-gradient);
+  color: var(--text-color);
   padding: 120px 0 0; /* Increase padding from navbar */
   position: relative;
 }
@@ -219,7 +229,7 @@ button {
 .hero h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #a0a0a0;
+  color: var(--text-color-muted);
 }
 
 .contact-info {
@@ -254,7 +264,7 @@ button {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   line-height: 1.6;
-  color: #a0a0a0;
+  color: var(--text-color-muted);
 }
 
 .hero-cta {
