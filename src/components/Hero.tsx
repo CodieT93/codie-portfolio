@@ -11,9 +11,9 @@ const Hero: React.FC = () => {
           <h1>Codie Tomlinson</h1>
           <h2>Full Stack Developer & Cyber Security</h2>
           <div className="contact-info">
-            <a href="mailto:codietomlinson93@gmail.com" className="contact-link">
+            <a href="mailto:codie.tomlinson@hotmail.com" className="contact-link">
               <i className="fas fa-envelope"></i>
-              <span>codietomlinson93@gmail.com</span>
+              <span>codie.tomlinson@hotmail.com</span>
             </a>
             <a href="tel:0404556593" className="contact-link">
               <i className="fas fa-phone"></i>
