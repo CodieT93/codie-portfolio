@@ -32,15 +32,6 @@ const technicalSkills: SkillCategory[] = [
   }
 ];
 
-const professionalSkills: string[] = [
-  "Problem-Solving",
-  "Teaching & Mentorship",
-  "Analytical Thinking",
-  "Team Collaboration",
-  "Effective Communication",
-  "Time Management"
-];
-
 const About: React.FC = () => {
   return (
     <section className="about section-padding" id="about">
@@ -74,15 +65,6 @@ const About: React.FC = () => {
                     ))}
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="professional-skills">
-            <h3>Professional Skills</h3>
-            <div className="skill-tags">
-              {professionalSkills.map((skill, index) => (
-                <span key={index} className="skill-tag professional">{skill}</span>
               ))}
             </div>
           </div>
