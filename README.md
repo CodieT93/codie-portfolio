@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing my professional journey, skills, and achievements in software development and technology.
 
-## 🌟 Features
+## Features
 
 ### 1. Interactive Navigation
 - Smooth scrolling navigation
@@ -39,7 +39,7 @@ A modern, responsive portfolio website showcasing my professional journey, skill
 - Touch-friendly interactions
 - Optimized for all screen sizes
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 ### Frontend
 - React
@@ -58,7 +58,7 @@ A modern, responsive portfolio website showcasing my professional journey, skill
 - Modern UI/UX principles
 - Accessibility considerations
 
-## 🚀 Getting Started
+## Getting Started
 
 1. Clone the repository:
    ```bash
@@ -78,7 +78,7 @@ A modern, responsive portfolio website showcasing my professional journey, skill
 
 4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser
 
-## 📱 Responsive Design
+## Responsive Design
 
 The portfolio is fully responsive and optimized for:
 - Desktop computers
@@ -86,7 +86,7 @@ The portfolio is fully responsive and optimized for:
 - Tablets
 - Mobile devices
 
-## 🎨 Design Features
+## Design Features
 
 - Modern gradient effects
 - Smooth animations
@@ -95,7 +95,7 @@ The portfolio is fully responsive and optimized for:
 - Consistent typography
 - High-contrast text for readability
 
-## 🔄 Future Updates
+## Future Updates
 
 Planned features and improvements:
 - Projects showcase section
@@ -104,12 +104,12 @@ Planned features and improvements:
 - More interactive elements
 - Performance optimizations
 
-## 📬 Contact
+## Contact
 
 Feel free to reach out for collaborations or questions:
-- [LinkedIn](Your LinkedIn URL)
+- [LinkedIn](https://www.linkedin.com/in/codie-t-960727288/)
 - [GitHub](https://github.com/CodieT93)
-- [Email](mailto:your.email@example.com)
+- [Email](mailto:codie.tomlinson@hotmail.com)
 
 ## 📄 License
 
