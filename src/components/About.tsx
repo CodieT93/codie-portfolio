@@ -1,34 +1,76 @@
 import React from 'react';
 
+interface Skill {
+  name: string;
+  logo: string;
+}
+
 interface SkillCategory {
   title: string;
-  skills: string[];
+  icon: string;
+  skills: Skill[];
 }
 
 const technicalSkills: SkillCategory[] = [
   {
     title: "Languages",
-    skills: ["JavaScript", "Python", "HTML", "CSS"]
+    icon: "fas fa-code",
+    skills: [
+      { name: "JavaScript", logo: "/images/logos/javascript-logo.jpg" },
+      { name: "TypeScript", logo: "/images/logos/typescript-logo.jpg" },
+      { name: "Python", logo: "/images/logos/python-logo.png" },
+      { name: "HTML", logo: "/images/logos/html-logo.png" },
+      { name: "CSS", logo: "/images/logos/css-logo.png" }
+    ]
   },
   {
     title: "Frameworks & Libraries",
-    skills: ["React.js", "React Native", "Node.js", "Express.js", "Django", "Redux", "Next.js"]
+    icon: "fas fa-layer-group",
+    skills: [
+      { name: "React.js", logo: "/images/logos/react-logo.png" },
+      { name: "Next.js", logo: "/images/logos/nextjs-logo.png" },
+      { name: "Node.js", logo: "/images/logos/nodejs-logo.png" },
+      { name: "Django", logo: "/images/logos/django-logo.png" },
+      { name: "Express.js", logo: "/images/logos/nodejs-logo.png" },
+      { name: "Tailwind", logo: "/images/logos/tailwind-logo.png" },
+      { name: "Bootstrap", logo: "/images/logos/bootstrap-logo.png" },
+      { name: "Sass", logo: "/images/logos/sass-logo.png" }
+    ]
   },
   {
     title: "Mobile Development",
-    skills: ["React Native", "Flutter", "Kotlin", "Swift"]
+    icon: "fas fa-mobile-alt",
+    skills: [
+      { name: "React Native", logo: "/images/logos/reactnative-logo.jpg" },
+      { name: "Flutter", logo: "/images/logos/flutter-logo.png" },
+      { name: "Kotlin", logo: "/images/logos/kotlin-logo.png" },
+      { name: "Swift", logo: "/images/logos/swift-logo.png" },
+      { name: "Android", logo: "/images/logos/android-logo.jpg" },
+      { name: "Expo", logo: "/images/logos/expo-logo.jpg" }
+    ]
   },
   {
     title: "Databases & Backend",
-    skills: ["MongoDB", "Firebase", "REST APIs", "SQL"]
+    icon: "fas fa-database",
+    skills: [
+      { name: "MongoDB", logo: "/images/logos/mongodb-logo.png" },
+      { name: "MySQL", logo: "/images/logos/mysql-logo.png" },
+      { name: "Firebase", logo: "/images/logos/firebase-logo.jpg" },
+      { name: "Supabase", logo: "/images/logos/supabase-logo.jpg" }
+    ]
   },
   {
     title: "DevOps & Tools",
-    skills: ["Git", "Docker", "AWS", "Azure", "CI/CD Pipelines"]
-  },
-  {
-    title: "Other",
-    skills: ["Responsive Design", "Web Accessibility", "Performance Optimization", "SEO Strategies"]
+    icon: "fas fa-tools",
+    skills: [
+      { name: "Git", logo: "/images/logos/git-logo.png" },
+      { name: "GitHub", logo: "/images/logos/github-logo.jpg" },
+      { name: "Docker", logo: "/images/logos/docker-logo.png" },
+      { name: "AWS", logo: "/images/logos/aws-logo.jpg" },
+      { name: "VS Code", logo: "/images/logos/Visual_Studio_Code_logo.png" },
+      { name: "Postman", logo: "/images/logos/postman-logo.png" },
+      { name: "Jest", logo: "/images/logos/jest-logo.png" }
+    ]
   }
 ];
 
@@ -53,20 +95,24 @@ const About: React.FC = () => {
         </div>
 
         <div className="skills-section">
-          <div className="technical-skills">
-            <h3>Technical Expertise</h3>
-            <div className="skills-grid">
-              {technicalSkills.map((category, index) => (
-                <div key={index} className="skill-category">
+          <h3 className="text-gradient">Technical Expertise</h3>
+          <div className="skills-grid">
+            {technicalSkills.map((category, index) => (
+              <div key={index} className="skill-category">
+                <div className="category-header">
+                  <i className={category.icon}></i>
                   <h4>{category.title}</h4>
-                  <div className="skill-tags">
-                    {category.skills.map((skill, i) => (
-                      <span key={i} className="skill-tag">{skill}</span>
-                    ))}
-                  </div>
                 </div>
-              ))}
-            </div>
+                <div className="skills-container">
+                  {category.skills.map((skill, i) => (
+                    <div key={i} className="skill-item">
+                      <img src={skill.logo} alt={`${skill.name} logo`} />
+                      <span>{skill.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
