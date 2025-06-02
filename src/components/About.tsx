@@ -16,60 +16,60 @@ const technicalSkills: SkillCategory[] = [
     title: "Languages",
     icon: "fas fa-code",
     skills: [
-      { name: "JavaScript", logo: "/images/logos/javascript-logo.jpg" },
-      { name: "TypeScript", logo: "/images/logos/typescript-logo.jpg" },
-      { name: "Python", logo: "/images/logos/python-logo.png" },
-      { name: "HTML", logo: "/images/logos/html-logo.png" },
-      { name: "CSS", logo: "/images/logos/css-logo.png" }
+      { name: "JavaScript", logo: `${process.env.PUBLIC_URL}/images/logos/javascript-logo.jpg` },
+      { name: "TypeScript", logo: `${process.env.PUBLIC_URL}/images/logos/typescript-logo.jpg` },
+      { name: "Python", logo: `${process.env.PUBLIC_URL}/images/logos/python-logo.png` },
+      { name: "HTML", logo: `${process.env.PUBLIC_URL}/images/logos/html-logo.png` },
+      { name: "CSS", logo: `${process.env.PUBLIC_URL}/images/logos/css-logo.png` }
     ]
   },
   {
     title: "Frameworks & Libraries",
     icon: "fas fa-layer-group",
     skills: [
-      { name: "React.js", logo: "/images/logos/react-logo.png" },
-      { name: "Next.js", logo: "/images/logos/nextjs-logo.png" },
-      { name: "Node.js", logo: "/images/logos/nodejs-logo.png" },
-      { name: "Django", logo: "/images/logos/django-logo.png" },
-      { name: "Express.js", logo: "/images/logos/nodejs-logo.png" },
-      { name: "Tailwind", logo: "/images/logos/tailwind-logo.png" },
-      { name: "Bootstrap", logo: "/images/logos/bootstrap-logo.png" },
-      { name: "Sass", logo: "/images/logos/sass-logo.png" }
+      { name: "React.js", logo: `${process.env.PUBLIC_URL}/images/logos/react-logo.png` },
+      { name: "Next.js", logo: `${process.env.PUBLIC_URL}/images/logos/nextjs-logo.png` },
+      { name: "Node.js", logo: `${process.env.PUBLIC_URL}/images/logos/nodejs-logo.png` },
+      { name: "Django", logo: `${process.env.PUBLIC_URL}/images/logos/django-logo.png` },
+      { name: "Express.js", logo: `${process.env.PUBLIC_URL}/images/logos/express-js.png` },
+      { name: "Tailwind", logo: `${process.env.PUBLIC_URL}/images/logos/tailwind-logo.png` },
+      { name: "Bootstrap", logo: `${process.env.PUBLIC_URL}/images/logos/bootstrap-logo.png` },
+      { name: "Sass", logo: `${process.env.PUBLIC_URL}/images/logos/sass-logo.png` }
     ]
   },
   {
     title: "Mobile Development",
     icon: "fas fa-mobile-alt",
     skills: [
-      { name: "React Native", logo: "/images/logos/reactnative-logo.jpg" },
-      { name: "Flutter", logo: "/images/logos/flutter-logo.png" },
-      { name: "Kotlin", logo: "/images/logos/kotlin-logo.png" },
-      { name: "Swift", logo: "/images/logos/swift-logo.png" },
-      { name: "Android", logo: "/images/logos/android-logo.jpg" },
-      { name: "Expo", logo: "/images/logos/expo-logo.jpg" }
+      { name: "React Native", logo: `${process.env.PUBLIC_URL}/images/logos/reactnative-logo.jpg` },
+      { name: "Flutter", logo: `${process.env.PUBLIC_URL}/images/logos/flutter-logo.png` },
+      { name: "Kotlin", logo: `${process.env.PUBLIC_URL}/images/logos/kotlin-logo.png` },
+      { name: "Swift", logo: `${process.env.PUBLIC_URL}/images/logos/swift-logo.png` },
+      { name: "Android", logo: `${process.env.PUBLIC_URL}/images/logos/android-logo.jpg` },
+      { name: "Expo", logo: `${process.env.PUBLIC_URL}/images/logos/expo-logo.jpg` }
     ]
   },
   {
     title: "Databases & Backend",
     icon: "fas fa-database",
     skills: [
-      { name: "MongoDB", logo: "/images/logos/mongodb-logo.png" },
-      { name: "MySQL", logo: "/images/logos/mysql-logo.png" },
-      { name: "Firebase", logo: "/images/logos/firebase-logo.jpg" },
-      { name: "Supabase", logo: "/images/logos/supabase-logo.jpg" }
+      { name: "MongoDB", logo: `${process.env.PUBLIC_URL}/images/logos/mongodb-logo.png` },
+      { name: "MySQL", logo: `${process.env.PUBLIC_URL}/images/logos/mysql-logo.png` },
+      { name: "Firebase", logo: `${process.env.PUBLIC_URL}/images/logos/firebase-logo.jpg` },
+      { name: "Supabase", logo: `${process.env.PUBLIC_URL}/images/logos/supabase-logo.jpg` }
     ]
   },
   {
     title: "DevOps & Tools",
     icon: "fas fa-tools",
     skills: [
-      { name: "Git", logo: "/images/logos/git-logo.png" },
-      { name: "GitHub", logo: "/images/logos/github-logo.jpg" },
-      { name: "Docker", logo: "/images/logos/docker-logo.png" },
-      { name: "AWS", logo: "/images/logos/aws-logo.jpg" },
-      { name: "VS Code", logo: "/images/logos/Visual_Studio_Code_logo.png" },
-      { name: "Postman", logo: "/images/logos/postman-logo.png" },
-      { name: "Jest", logo: "/images/logos/jest-logo.png" }
+      { name: "Git", logo: `${process.env.PUBLIC_URL}/images/logos/git-logo.png` },
+      { name: "GitHub", logo: `${process.env.PUBLIC_URL}/images/logos/github-logo.jpg` },
+      { name: "Docker", logo: `${process.env.PUBLIC_URL}/images/logos/docker-logo.png` },
+      { name: "AWS", logo: `${process.env.PUBLIC_URL}/images/logos/aws-logo.jpg` },
+      { name: "VS Code", logo: `${process.env.PUBLIC_URL}/images/logos/Visual_Studio_Code_logo.png` },
+      { name: "Postman", logo: `${process.env.PUBLIC_URL}/images/logos/postman-logo.png` },
+      { name: "Jest", logo: `${process.env.PUBLIC_URL}/images/logos/jest-logo.png` }
     ]
   }
 ];
